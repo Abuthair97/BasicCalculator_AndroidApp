@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/EtTextNum1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="63dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/EtTextNum2"
+        app:layout_constraintEnd_toEndOf="@+id/EtTextNum2"
+        tools:ignore="UnknownId" />
+
+    <EditText
+        android:id="@+id/EtTextNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="281dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/BasicCAl"
+        android:layout_width="156dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="87dp"
+        android:fontFamily="serif-monospace"
+        android:text="Basic Calculator"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownId" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="19dp"
+        android:text="Add"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnSub"
+        app:layout_constraintEnd_toStartOf="@+id/btnSub"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="Sub"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnMulti"
+        app:layout_constraintEnd_toStartOf="@+id/btnMulti"
+        app:layout_constraintStart_toEndOf="@+id/btnAdd" />
+
+    <Button
+        android:id="@+id/btnMulti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="94dp"
+        android:layout_marginBottom="95dp"
+        android:text="MULTI"
+        app:layout_constraintBottom_toTopOf="@+id/TvResult"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSub"
+        app:layout_constraintTop_toBottomOf="@+id/EtTextNum2" />
+
+    <TextView
+        android:id="@+id/TvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="149dp"
+        android:text="Result"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnSub" />
+</androidx.constraintlayout.widget.ConstraintLayout>
